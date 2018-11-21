@@ -25,13 +25,13 @@ filterbtn.on("click", function() {
     // Prevent the page from refreshing
     d3.event.preventDefault();
     // Select the input element and get the raw HTML node
-    var inputElement = d3.select("#date");
+    var inputElement = d3.select("#datetime");
     // Get the value property of the input element
     var inputValue = inputElement.property("value");
     console.log(inputValue);
     //from the data (UFO sightings), only retrieve results where datetime=inputValue
     var results =  data.filter(function(x) {
-        return x.date == inputValue;
+        return x.datetime == inputValue;
     });
     console.log(results)
 
